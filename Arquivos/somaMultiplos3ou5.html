@@ -1,0 +1,24 @@
+<html>
+    <script>
+        //Enunciado
+        //O aluno deverá criar um programa para informar a soma de todos os múltiplos de 3 ou 5 menores que determinado número.
+
+        function somaMultiplos3ou5 (numero) {
+            if (typeof numero === 'number'){
+                    let listaMultiplos = [];
+                for (i = 0; i < numero; i++) {
+                    if ((i % 3) == 0 || (i % 5) == 0){
+                        listaMultiplos.push(i);
+                    }
+                }
+                let soma = listaMultiplos.reduce(function(soma, i){
+                    return soma + i;
+                })
+                return soma;
+            } else {
+                return 'O valor de entrada invalido!'
+            }
+        }
+    </script>
+</html>
+
